@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Book</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+        <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+        <script src="../js/addElement.js"></script>
+    </head>
+    <body>
+        <div data-role="page">
+            <div data-role="header" class="ui-content">
+                <h1>Books</h1>
+            </div>
+            <div data-role="main" class="ui-content" id="window">
+                <label>ISBN:</label>
+                <input type="text" id="isbn" data-theme="a">
+                <label>Title:</label>
+                <input type="text" id="title" data-theme="a">
+                <label>Price:</label>
+                <input type="text" id="price" data-theme="a">
+                <label>Publisher:</label>
+                <input type="text" id="publisher" data-theme="a">
+                <label>Date published</label>
+                <input type="text" id="date" data-theme="a">
+                <label>Genre</label>
+                <input type="text" id="genre" data-theme="a">
+                <div align="right">
+                    <a href="#" class="ui-btn ui-btn-inline">Search</a>
+                    <a href="#" class="ui-btn ui-btn-inline">Add</a>
+                    <a href="#" class="ui-btn ui-btn-inline">Update</a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

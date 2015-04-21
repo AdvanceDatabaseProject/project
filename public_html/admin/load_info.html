@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Load Information</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+        <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    </head>
+    <body>
+        <div data-role="header" class="ui-content">
+            <h1>Load Information</h1>
+        </div>
+        <div data-role="main" class="ui-content" id="window">
+            <div>
+                <label>File Address</label>
+                <input type="text" id="address" data-theme="a">
+                <label>Table</label>
+                <select id="table">
+                    <option value="genre">genre</option>
+                    <option value="customer">customer</option>
+                    <option value="publisher">publisher</option>
+                    <option value="book">book</option>
+                    <option value="author">author</option>
+                    <option value="orders">orders</option>
+                    <option value="contains">contains</option>
+                    <option value="wrote">wrote</option>
+                    <option value="belong">belong</option>
+                </select>
+                <div align="right">
+                    <a href="#" class="ui-btn ui-btn-inline">Load</a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
