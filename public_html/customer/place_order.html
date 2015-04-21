@@ -13,8 +13,10 @@ and open the template in the editor.
         <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
         <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
         <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+        <script src="../js/addElement.js"></script>
     </head>
-    <body>
+    <body onload="addBook()">
         <div data-role="page">
             <div data-role="header" class="ui-content">
                 <h1>Order</h1>
@@ -29,13 +31,9 @@ and open the template in the editor.
                 </select>
                 <label>Card Number</label>
                 <input type="text" id="card_number" data-theme="a">
-                <div>
-                    <label>Title:</label>
-                    <div id="list_book"></div>
-                    <label>Amount</label>
-                    <input type="text" id="stock" data-theme="a">
+                <div id="more_book">
                 </div>
-                <a href="#">Add Books</a>
+                <a href="#" onclick="addBook()">Add Books</a>
                 <div align="right">
                     <a href="#" class="ui-btn ui-btn-inline">Place Order</a>
                 </div>
