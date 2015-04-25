@@ -13,6 +13,8 @@ and open the template in the editor.
         <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
         <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
         <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        
+        <script src="../js/view.js"></script>
     </head>
     <body>
         <div data-role="page">
@@ -21,13 +23,13 @@ and open the template in the editor.
             </div>
             <div data-role="main" class="ui-content" id="window">
                 <label>Publisher ID:</label>
-                <input type="text" id="publishe_id" data-theme="a" disabled>
+                <input type="text" id="publisher_ID" data-theme="a" disabled>
                 <label>Publisher Name:</label>
-                <input type="text" id="publishe_name" data-theme="a">
+                <input type="text" id="publisher_name" data-theme="a">
                 <label>Phone:</label>
                 <input type="text" id="phone" data-theme="a">
                 <div align="right">
-                    <a href="#" class="ui-btn ui-btn-inline">Search</a>
+                    <a href="#" class="ui-btn ui-btn-inline" onclick="view('publisher','*')">Search</a>
                     <a href="#" class="ui-btn ui-btn-inline">Add</a>
                     <a href="#" class="ui-btn ui-btn-inline">Update</a>
                 </div>

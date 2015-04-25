@@ -14,7 +14,8 @@ and open the template in the editor.
         <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
         <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
         
-        <?php include 'php/index.php';?>
+        <script src="../js/callPhp.js"></script>
+        
     </head>
     <body>
         <div data-role="page">
@@ -23,18 +24,18 @@ and open the template in the editor.
             </div>
             <div data-role="main" class="ui-content" id="window">
                 <label>Customer ID:</label>
-                <input type="text" id="customer_id" data-theme="a" disabled>
+                <input type="text" id="customerID" data-theme="a" disabled>
                 <label>First Name:</label>
-                <input type="text" id="fname" data-theme="a">
+                <input type="text" id="Fname" data-theme="a">
                 <label>Last Name:</label>
-                <input type="text" id="lname" data-theme="a">
+                <input type="text" id="Lname" data-theme="a">
                 <label>Street:</label>
                 <input type="text" id="street" data-theme="a">
                 <label>City:</label>
                 <input type="text" id="city" data-theme="a">
                 <label>State:</label>
                 <select id="state">
-                    <option></option>
+                    <option value=""></option>
                     <option value="AL">Alabama</option>
                     <option value="AK">Alaska</option>
                     <option value="AZ">Arizona</option>
@@ -90,14 +91,14 @@ and open the template in the editor.
                 <label>Zip:</label>
                 <input type="text" id="zip" data-theme="a">
                 <label>Gender:</label>
-                <select>
-                    <option id="gender"></option>
+                <select id="gender">
+                    <option value=""></option>
                     <option value="male">Male</option>
                     <option value="female">Female</option>
                 </select>
                 <div align="right">
-                    <a href="#" class="ui-btn ui-btn-inline">Search</a>
-                    <a href="#" class="ui-btn ui-btn-inline">Add</a>
+                    <a href="#" class="ui-btn ui-btn-inline" onclick="view('customer')">Search</a>
+                    <a href="#" class="ui-btn ui-btn-inline" onclick="add('customer')">Add</a>
                     <a href="#" class="ui-btn ui-btn-inline">Update</a>
                 </div>
             </div>
