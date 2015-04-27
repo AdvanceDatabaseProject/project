@@ -19,7 +19,7 @@ function view(table, select) {
         var e = document.getElementById(inputs[i].getAttribute("id"));
         if (e.getAttribute("id") === "genre" && table === "book") {
             genreflag = true;
-        }  else if (e.value.trim() !== "") {
+        } else if (e.value.trim() !== "") {
             string += "&" + e.getAttribute("id") + "=" + e.value;
         }
     }
@@ -54,7 +54,7 @@ function viewpublisher(publisherID) {
 
 function getViewPhp(url) {
     $.get(url, function (data) {
-        var phpcontant = data.split(",");
+        var phpcontant = data.substring(data.indexOf("<p>") + 3, data.indexOf("</p>")).split(",");
         for (var i = 0; i < phpcontant.length; i++) {
             var e = phpcontant[i].split(":");
             if (document.getElementById(e[0])) {
@@ -63,3 +63,22 @@ function getViewPhp(url) {
         }
     });
 }
+
+function displaybook(id) {
+    var url = path + "&table=book"
+    $.get(url, function (data) {
+        var phpcontant = data.substring(data.indexOf("<p>") + 3, data.indexOf("</p>")).split(",");
+        var string = "<select id='select_book' width='100%'><option>hi</option>";
+        for (var i = 0; i < phpcontant.length; i++) {
+            var e = phpcontant[i].split(":");
+            if(e[0]=='ISBN'){
+                string+="<option value='"+e[1]+">";
+            }else if(e[0]=="title"){
+                string+=e[1]+"</option>"
+            }
+        }
+        string+="</select>";
+        document.getElementById(id).innerHTML=string;
+    });
+}
+

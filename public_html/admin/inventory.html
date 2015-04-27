@@ -13,8 +13,10 @@ and open the template in the editor.
         <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
         <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
         <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        
+        <script src="../js/view.js"></script>
     </head>
-    <body>
+    <body onload="displaybook('list_book')">
         <div data-role="page">
             <div data-role="header" class="ui-content">
                 <h1>Inventory</h1>
@@ -22,7 +24,7 @@ and open the template in the editor.
             <div data-role="main" class="ui-content" id="window">
                 <div>
                     <label>Title:</label>
-                    <div id="list_book"></div>
+                    <p id="list_book"></p>
                     <label>Amount</label>
                     <input type="text" id="stock" data-theme="a">
                     <div align="right">
